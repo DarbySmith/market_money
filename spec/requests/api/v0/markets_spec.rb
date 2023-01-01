@@ -10,7 +10,7 @@ RSpec.describe "All markets endpoint" do
 
     markets = JSON.parse(response.body, symbolize_names: true)[:data]
 
-    expect(repsonse).to be_successful
+    expect(response).to be_successful
 
     expect(markets[0][:attributes]).to have_key(:fmid)
     expect(markets[0][:attributes][:fmid]).to be_a(Integer)
